@@ -1,0 +1,843 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Celia Tsai Portfolio</title>
+    <meta
+      name="description"
+      content="Celia Tsai UI/UX and web design portfolio: product design, ecommerce, media, AR beauty, responsive web and frontend implementation."
+    />
+    <style>
+      :root {
+        --ink: #161616;
+        --muted: #6f6a63;
+        --paper: #f7f2ea;
+        --paper-2: #fffaf2;
+        --line: rgba(22, 22, 22, 0.13);
+        --accent: #f0642f;
+        --teal: #0e7c7b;
+        --gold: #c99a3d;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--paper);
+        font-family: Arial, "Noto Sans TC", sans-serif;
+        line-height: 1.6;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      .site-header {
+        position: fixed;
+        z-index: 20;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 28px;
+        padding: 22px clamp(20px, 4vw, 64px);
+        color: #fff;
+        mix-blend-mode: difference;
+      }
+
+      .brand {
+        font-size: 18px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 18px;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .nav a {
+        opacity: 0.86;
+      }
+
+      .nav a:hover {
+        color: var(--accent);
+        opacity: 1;
+      }
+
+      .hero {
+        min-height: 100vh;
+        display: grid;
+        align-items: end;
+        position: relative;
+        isolation: isolate;
+        overflow: hidden;
+        padding: 140px clamp(24px, 6vw, 96px) 92px;
+        color: #fff;
+        background: #121212;
+      }
+
+      .hero-image {
+        position: absolute;
+        inset: 0;
+        z-index: -2;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 58% 25%;
+        filter: grayscale(0.08) contrast(1.03) brightness(0.72);
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background:
+          linear-gradient(90deg, rgba(10, 10, 10, 0.78), rgba(10, 10, 10, 0.38) 46%, rgba(10, 10, 10, 0.12)),
+          linear-gradient(180deg, rgba(10, 10, 10, 0.5), transparent 38%, rgba(10, 10, 10, 0.78));
+      }
+
+      .hero-content {
+        width: min(920px, 100%);
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 26px;
+        color: rgba(255, 255, 255, 0.82);
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .eyebrow::before {
+        content: "";
+        width: 48px;
+        height: 2px;
+        background: var(--accent);
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin-bottom: 26px;
+        font-size: clamp(58px, 10vw, 142px);
+        line-height: 0.92;
+        letter-spacing: 0;
+      }
+
+      .hero-copy {
+        max-width: 680px;
+        margin: 0 0 34px;
+        color: rgba(255, 255, 255, 0.84);
+        font-size: clamp(18px, 2vw, 24px);
+      }
+
+      .hero-actions,
+      .section-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 48px;
+        padding: 0 22px;
+        border: 1px solid currentColor;
+        border-radius: 0;
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .button.primary {
+        border-color: var(--accent);
+        background: var(--accent);
+        color: #fff;
+      }
+
+      .button.dark {
+        border-color: var(--ink);
+        background: var(--ink);
+        color: #fff;
+      }
+
+      .button:hover {
+        transform: translateY(-2px);
+      }
+
+      main section {
+        padding: 112px clamp(24px, 6vw, 96px);
+      }
+
+      .section-head {
+        display: grid;
+        grid-template-columns: minmax(180px, 0.45fr) minmax(0, 1fr);
+        gap: clamp(24px, 6vw, 88px);
+        margin-bottom: 54px;
+      }
+
+      .section-label {
+        color: var(--accent);
+        font-size: 12px;
+        font-weight: 900;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      h2 {
+        margin-bottom: 18px;
+        font-size: clamp(38px, 6vw, 82px);
+        line-height: 0.98;
+        letter-spacing: 0;
+      }
+
+      .lead {
+        max-width: 780px;
+        color: var(--muted);
+        font-size: clamp(18px, 2vw, 22px);
+      }
+
+      .services {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        border-top: 1px solid var(--line);
+        border-left: 1px solid var(--line);
+      }
+
+      .service {
+        min-height: 280px;
+        padding: 34px;
+        border-right: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+        background: rgba(255, 250, 242, 0.55);
+      }
+
+      .service-number {
+        margin-bottom: 42px;
+        color: var(--gold);
+        font-size: 14px;
+        font-weight: 900;
+      }
+
+      .service h3 {
+        margin-bottom: 14px;
+        font-size: 28px;
+        line-height: 1.12;
+      }
+
+      .service p {
+        margin-bottom: 0;
+        color: var(--muted);
+      }
+
+      .works {
+        background: var(--ink);
+        color: #fff;
+      }
+
+      .works .lead {
+        color: rgba(255, 255, 255, 0.68);
+      }
+
+      .work-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1px;
+        background: rgba(255, 255, 255, 0.16);
+      }
+
+      .work-card {
+        position: relative;
+        aspect-ratio: 1 / 1;
+        overflow: hidden;
+        background: #242424;
+      }
+
+      .work-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: grayscale(0.08) brightness(0.82);
+        transition: transform 0.45s ease, filter 0.45s ease;
+      }
+
+      .work-card:hover img {
+        transform: scale(1.06);
+        filter: grayscale(0) brightness(0.66);
+      }
+
+      .work-info {
+        position: absolute;
+        inset: auto 0 0 0;
+        padding: 28px;
+        background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.86));
+      }
+
+      .work-info small {
+        display: block;
+        margin-bottom: 8px;
+        color: #ffb58f;
+        font-size: 12px;
+        font-weight: 900;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .work-info h3 {
+        margin-bottom: 8px;
+        font-size: 26px;
+        line-height: 1.1;
+      }
+
+      .work-info p {
+        margin-bottom: 0;
+        color: rgba(255, 255, 255, 0.72);
+        font-size: 14px;
+      }
+
+      .about {
+        display: grid;
+        grid-template-columns: minmax(0, 0.9fr) minmax(300px, 0.65fr);
+        gap: clamp(36px, 7vw, 96px);
+        align-items: start;
+        background: var(--paper-2);
+      }
+
+      .about-copy p {
+        color: var(--muted);
+        font-size: 18px;
+      }
+
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1px;
+        margin-top: 36px;
+        background: var(--line);
+      }
+
+      .stat {
+        padding: 24px;
+        background: var(--paper-2);
+      }
+
+      .stat strong {
+        display: block;
+        color: var(--accent);
+        font-size: 34px;
+        line-height: 1;
+      }
+
+      .stat span {
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .profile-panel {
+        padding: 36px;
+        border: 1px solid var(--line);
+        background: #fff;
+      }
+
+      .profile-panel img {
+        width: 100%;
+        aspect-ratio: 4 / 5;
+        object-fit: cover;
+        object-position: 52% 18%;
+        margin-bottom: 28px;
+      }
+
+      .profile-panel h3 {
+        margin-bottom: 6px;
+        font-size: 30px;
+      }
+
+      .profile-panel p {
+        margin-bottom: 0;
+        color: var(--muted);
+      }
+
+      .process {
+        background: #e8ded0;
+      }
+
+      .process-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 28px;
+      }
+
+      .process-item {
+        padding-top: 24px;
+        border-top: 2px solid var(--ink);
+      }
+
+      .process-item span {
+        color: var(--accent);
+        font-weight: 900;
+      }
+
+      .process-item h3 {
+        margin: 18px 0 12px;
+        font-size: 30px;
+      }
+
+      .process-item p {
+        color: #5f564e;
+      }
+
+      .journal-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 28px;
+      }
+
+      .journal article {
+        padding: 28px 0;
+        border-top: 1px solid var(--line);
+      }
+
+      .journal time {
+        color: var(--teal);
+        font-size: 13px;
+        font-weight: 900;
+      }
+
+      .journal h3 {
+        margin: 18px 0 10px;
+        font-size: 28px;
+        line-height: 1.16;
+      }
+
+      .journal p {
+        color: var(--muted);
+      }
+
+      .contact {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(280px, 0.48fr);
+        gap: clamp(36px, 7vw, 96px);
+        color: #fff;
+        background: var(--ink);
+      }
+
+      .contact .lead {
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      .contact-list {
+        display: grid;
+        gap: 18px;
+        align-content: start;
+        padding-top: 12px;
+      }
+
+      .contact-row {
+        padding-bottom: 18px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+      }
+
+      .contact-row span {
+        display: block;
+        color: rgba(255, 255, 255, 0.48);
+        font-size: 12px;
+        font-weight: 900;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .contact-row a,
+      .contact-row strong {
+        font-size: 20px;
+      }
+
+      footer {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 28px clamp(24px, 6vw, 96px);
+        color: rgba(255, 255, 255, 0.6);
+        background: #0f0f0f;
+        font-size: 13px;
+      }
+
+      @media (max-width: 980px) {
+        .site-header {
+          align-items: flex-start;
+          color: #fff;
+          mix-blend-mode: normal;
+          background: rgba(15, 15, 15, 0.74);
+          backdrop-filter: blur(14px);
+        }
+
+        .nav {
+          gap: 10px 14px;
+          font-size: 11px;
+        }
+
+        .section-head,
+        .about,
+        .contact {
+          grid-template-columns: 1fr;
+        }
+
+        .services,
+        .work-grid,
+        .process-list,
+        .journal-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .site-header {
+          position: absolute;
+          display: block;
+        }
+
+        .nav {
+          justify-content: flex-start;
+          margin-top: 12px;
+        }
+
+        .hero {
+          min-height: 92vh;
+          padding: 150px 22px 58px;
+        }
+
+        .hero-image {
+          object-position: 58% 10%;
+        }
+
+        main section {
+          padding: 72px 22px;
+        }
+
+        h1 {
+          font-size: 58px;
+        }
+
+        .services,
+        .work-grid,
+        .process-list,
+        .journal-grid,
+        .stats {
+          grid-template-columns: 1fr;
+        }
+
+        .service,
+        .profile-panel {
+          padding: 26px;
+        }
+
+        footer {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header" aria-label="Site navigation">
+      <a class="brand" href="#home">Celia Tsai</a>
+      <nav class="nav">
+        <a href="#services">What I Do</a>
+        <a href="#works">Works</a>
+        <a href="#about">About</a>
+        <a href="#process">Process</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <img class="hero-image" src="./public/main.png" alt="Celia Tsai portfolio main visual" />
+        <div class="hero-content">
+          <div class="eyebrow">UI / UX Designer · Taipei</div>
+          <h1>Celia Tsai Portfolio</h1>
+          <p class="hero-copy">
+            I design digital products, campaign sites, ecommerce flows and responsive interfaces that balance
+            visual craft, user insight and practical implementation.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#works">View Works</a>
+            <a class="button" href="#contact">Contact Me</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="services">
+        <div class="section-head">
+          <div class="section-label">What I Do</div>
+          <div>
+            <h2>From product thinking to polished UI delivery.</h2>
+            <p class="lead">
+              將需求訪談、使用者洞察、介面流程、視覺設計與 RWD 切版串成一個清楚可交付的工作流程。
+            </p>
+          </div>
+        </div>
+        <div class="services">
+          <article class="service">
+            <div class="service-number">01</div>
+            <h3>UX Research & Strategy</h3>
+            <p>需求訪談、競品分析、persona、使用者訪談與易用性測試，讓產品方向先對焦。</p>
+          </article>
+          <article class="service">
+            <div class="service-number">02</div>
+            <h3>UI Design & Prototyping</h3>
+            <p>User story、wireframe、風格提案、介面設計，從結構到視覺一致推進。</p>
+          </article>
+          <article class="service">
+            <div class="service-number">03</div>
+            <h3>RWD & Frontend Handoff</h3>
+            <p>Guideline、元件切圖、介面標註、HTML/CSS/RWD 切版，降低工程溝通成本。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="works" class="works">
+        <div class="section-head">
+          <div class="section-label">Selected Works</div>
+          <div>
+            <h2>My Works, rebuilt as a focused portfolio wall.</h2>
+            <p class="lead">
+              依照 Scrape template 的作品網格節奏，整理出跨媒體、電商、美妝、新聞與工具型產品的代表案例。
+            </p>
+          </div>
+        </div>
+        <div class="work-grid">
+          <a class="work-card" href="../celiadesign/health.html" target="_blank" rel="noreferrer">
+            <img src="./public/work/health-thumb.jpg" alt="Health 2.0 project thumbnail" />
+            <div class="work-info">
+              <small>Web / UI Design</small>
+              <h3>健康 2.0</h3>
+              <p>健康內容平台網站改版，重整內容閱讀與行動裝置體驗。</p>
+            </div>
+          </a>
+          <a class="work-card" href="../celiadesign/taste/index.html" target="_blank" rel="noreferrer">
+            <img src="./public/work/supertaste-thumb.jpg" alt="Supertaste app project thumbnail" />
+            <div class="work-info">
+              <small>App UI</small>
+              <h3>食尚玩家</h3>
+              <p>美食旅遊內容 App UI，結合探索、收藏與行程資訊。</p>
+            </div>
+          </a>
+          <a class="work-card" href="https://www.perfectcorp.com/business/technologies/makeup-ar" target="_blank" rel="noreferrer">
+            <img src="./public/work/perfect-thumb.jpg" alt="Perfect Corp project thumbnail" />
+            <div class="work-info">
+              <small>Beauty Tech</small>
+              <h3>Perfect.com</h3>
+              <p>AR / AI 美妝科技服務頁、品牌頁與動畫視覺更新。</p>
+            </div>
+          </a>
+          <a class="work-card" href="https://drive.google.com/file/d/1p4bWMuwKc8EYpLFZ0FzsRqBiPwqOxZaR/view?usp=sharing" target="_blank" rel="noreferrer">
+            <img src="./public/work/research-thumb.jpg" alt="UX research project thumbnail" />
+            <div class="work-info">
+              <small>UX Research</small>
+              <h3>使用者訪談</h3>
+              <p>分群招募、質性訪談、易用性測試與洞察整理。</p>
+            </div>
+          </a>
+          <a class="work-card" href="https://cars.tvbs.com.tw" target="_blank" rel="noreferrer">
+            <img src="./public/work/cars-thumb.jpg" alt="TVBS cars project thumbnail" />
+            <div class="work-info">
+              <small>Media Platform</small>
+              <h3>地球黃金線</h3>
+              <p>汽車頻道內容架構、新聞導流與專題活動視覺。</p>
+            </div>
+          </a>
+          <a class="work-card" href="../celiadesign/groupon/GROUPON.html" target="_blank" rel="noreferrer">
+            <img src="./public/work/groupon-thumb.jpg" alt="Groupon project thumbnail" />
+            <div class="work-info">
+              <small>Ecommerce</small>
+              <h3>GROUPON</h3>
+              <p>團購網站與 App UI，聚焦商品瀏覽、分類與購買流程。</p>
+            </div>
+          </a>
+          <a class="work-card" href="../celiadesign/ycs.html" target="_blank" rel="noreferrer">
+            <img src="./public/work/ycs-thumb.jpg" alt="YouCam Shop project thumbnail" />
+            <div class="work-info">
+              <small>Beauty Commerce</small>
+              <h3>YouCam Shop</h3>
+              <p>美妝購物 App，結合商品探索、試妝與購買動線。</p>
+            </div>
+          </a>
+          <a class="work-card" href="https://www.beautycircle.com/" target="_blank" rel="noreferrer">
+            <img src="./public/work/beauty-circle-thumb.jpg" alt="Beauty Circle project thumbnail" />
+            <div class="work-info">
+              <small>Community</small>
+              <h3>Beauty Circle</h3>
+              <p>美妝社群網站設計與 HTML/CSS 頁面實作。</p>
+            </div>
+          </a>
+          <a class="work-card" href="#" aria-label="Book annual report project">
+            <img src="./public/work/books-thumb.jpg" alt="Annual report project thumbnail" />
+            <div class="work-info">
+              <small>Campaign</small>
+              <h3>博客來年度報告</h3>
+              <p>以資料故事與活動視覺提升使用者回顧體驗。</p>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section id="about" class="about">
+        <div class="about-copy">
+          <div class="section-label">About Celia</div>
+          <h2>Senior web designer with product sense.</h2>
+          <p>
+            I graduated from National Taiwan University of Arts, majoring in Visual Communication Design. I have
+            worked across ecommerce, social media, beauty tech, media platforms and campaign websites.
+          </p>
+          <p>
+            我擅長 UI/UX 設計、CSS / HTML / RWD 切版，並在商業目標、使用者體驗、資料洞察與工程可行性之間找到平衡。
+          </p>
+          <div class="stats">
+            <div class="stat">
+              <strong>14+</strong>
+              <span>Years experience</span>
+            </div>
+            <div class="stat">
+              <strong>30+</strong>
+              <span>Web / app projects</span>
+            </div>
+            <div class="stat">
+              <strong>UI</strong>
+              <span>UX / RWD / HTML / CSS</span>
+            </div>
+          </div>
+        </div>
+        <aside class="profile-panel">
+          <img src="./public/me.png" alt="Celia Tsai" />
+          <h3>Celia Tsai</h3>
+          <p>UI/UX Designer · Senior Web Designer · Taipei, Taiwan</p>
+        </aside>
+      </section>
+
+      <section id="process" class="process">
+        <div class="section-head">
+          <div class="section-label">Design Process</div>
+          <div>
+            <h2>A clear path from brief to launch.</h2>
+            <p class="lead">以舊站三個能力區塊為基礎，重新整理為更容易閱讀的服務流程。</p>
+          </div>
+        </div>
+        <div class="process-list">
+          <article class="process-item">
+            <span>01 / Discover</span>
+            <h3>需求釐清</h3>
+            <p>透過需求訪談、競品分析、persona 與 growth mindset，確認問題與專案方向。</p>
+          </article>
+          <article class="process-item">
+            <span>02 / Design</span>
+            <h3>設計執行</h3>
+            <p>建立 user story、wireframe、設計風格與互動流程，快速對齊團隊共識。</p>
+          </article>
+          <article class="process-item">
+            <span>03 / Deliver</span>
+            <h3>產出驗收</h3>
+            <p>交付 guideline、元件切圖、標註與前端實作，協助工程與 PO 驗收落地。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="journal" aria-labelledby="journal-title">
+        <div class="section-head">
+          <div class="section-label">Journal</div>
+          <div>
+            <h2 id="journal-title">Notes from product and interface work.</h2>
+            <p class="lead">延續參考頁 Blog 區塊，改為能呈現專業觀點的短文入口。</p>
+          </div>
+        </div>
+        <div class="journal-grid">
+          <article>
+            <time datetime="2026-06-24">Design Thinking</time>
+            <h3>用資料與訪談找到介面設計的優先順序</h3>
+            <p>從使用者回饋、行為資料與商業目標之間，整理可執行的設計決策。</p>
+          </article>
+          <article>
+            <time datetime="2026-06-24">Responsive UI</time>
+            <h3>RWD 不只是縮版，而是重新安排閱讀節奏</h3>
+            <p>行動裝置上的資訊密度、觸控區域與視覺層級，需要在設計初期一起思考。</p>
+          </article>
+          <article>
+            <time datetime="2026-06-24">Handoff</time>
+            <h3>讓設計交付更順的三個做法</h3>
+            <p>明確元件狀態、標註規則與例外情境，能大幅降低後續溝通成本。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <div>
+          <div class="section-label">Contact</div>
+          <h2>Let’s build a clearer digital product.</h2>
+          <p class="lead">
+            If you need UI/UX design, website redesign, responsive frontend, campaign page or product flow review,
+            feel free to contact me.
+          </p>
+          <div class="section-actions">
+            <a class="button primary" href="mailto:fishpka@hotmail.com">Send Email</a>
+            <a class="button" href="https://www.linkedin.com/in/celia-tsai-5b254779" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
+        </div>
+        <div class="contact-list">
+          <div class="contact-row">
+            <span>Name</span>
+            <strong>Celia Tsai</strong>
+          </div>
+          <div class="contact-row">
+            <span>Location</span>
+            <strong>Taipei, Taiwan</strong>
+          </div>
+          <div class="contact-row">
+            <span>Email</span>
+            <a href="mailto:fishpka@hotmail.com">fishpka@hotmail.com</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>© 2026 Celia Tsai. All Rights Reserved.</span>
+      <a href="#home">Back to top</a>
+    </footer>
+  </body>
+</html>
