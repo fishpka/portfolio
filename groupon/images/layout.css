@@ -1,0 +1,133 @@
+@charset "utf-8";
+/* Renewal of Groupon */
+body{background:#ffffff url(bg_rays.jpg) no-repeat center 68px; 
+	font-family:微軟正黑體,Verdana, Arial, Helvetica, sans-serif; 
+	margin:0px auto; 
+	padding:0px;
+	overflow: auto;
+}
+img{border: solid 0px #fff;}
+h2{margin:20px auto 0px; padding:0px;height:36px;}
+h2 span{ display:none;}
+h2.g_tit01{background-position: 0px 0px;width: 196px; clear:both;margin-right: 750px;}
+h2.g_tit02{background-position: 0px -38px;width: 196px; clear:both;margin-right: 750px;}
+h2.g_tit03{background-position: 0px -75px;width: 196px; clear:both;margin-right: 750px;margin-top:50px; }
+h2.g_tit04{background:url(g_tit04.png) no-repeat 34px 0px; clear:both;}
+ul,li{list-style: none;display: block;}
+.clear{clear: both;}
+.clearfix {overflow: auto;}
+
+
+/*-------------content start---------------*/
+.content_wrapper{width:1240px; background:#fff; padding:15px 10px 20px 15px; z-index:1; position:relative;}
+.nav_text{color:#ccc;}
+.buy_green{background-image:url('burst_green.jpg');}
+
+/*-------------#header start---------------*/
+.county{ width:100%; height:83px; background:#222;}
+ul.counties_choose{ width:990px; margin:0px auto; list-style-type:none; padding-top:10px;}
+ul.counties_choose li{ width:180px; left:30px; float:left; text-align:center;}
+ul.counties_choose li a{ color:#fff; font-size:13px; text-decoration:none; width:170px; left:30px; display:block; border:1px dotted #414141; padding:5px;}
+ul.counties_choose li a:hover{ background:#555555; color:#4bc1de; border:1px dotted #414141;}
+
+span.sleBG{background:url(new_arrow.png) no-repeat 156px; width:183px; height:23px;display:block; border:1px solid #adadad;cursor:pointer;}
+span.sleHid{display:block; width:156px; height:23px;overflow:hidden;}
+select.valid{ background:#333;width:183px;height:23px;background:#393939; color:#fff; border:none;}
+
+/*-------------top deal start---------------*/
+.content_top{width:960px; height:14px;margin:0px auto; background:url(content_top.gif) no-repeat center;}
+.content{width:960px; overflow:hidden; margin:0px auto; background:#fff;}
+.content_bottom{width:960px; height:14px; overflow:hidden; margin:0px auto 20px; background:url(content_bottom.gif) no-repeat center;}
+
+/* ul.nav{ width:950px; margin:0px auto; height:91px; list-style-type:none; padding-top:80px;} */
+.content_nav{width:970px;background:#5c5c5c;height:92px;border-radius:10px 10px 0 0;}
+ul.nav{float:left; height:61px; list-style-type:none; padding-top:20px;} 
+ul.nav li{ color:#fff;width:77px; height:35px; float:left;font-size:14px;font-family:微軟正黑體,Verdana, Arial, Helvetica, sans-serif;}
+
+
+
+/*輪播區塊*/
+.maincolumn{width:1250px;float: left;margin-bottom: 30px;}
+.mainbox{width:822px;height: 360px;float: left;}
+.btn_last{position:absolute;z-index:99;top:136px;left:15px;}
+.btn_next{position:absolute;z-index:99;top:136px;left:786px;}
+.mainpic{width: 800px;float: left;margin-bottom: 10px;}
+.mainpic_dot{float: left;width: 789px;}
+.mainpic_dot ul{width: 150px;margin:7px auto;}
+.mainpic_dot li{float: left;width: 25px;}
+
+.title{float: left;margin-bottom: 2px;margin-right: 10px;}
+.titleboxs{width: 202px;float: left;margin-bottom: 10px;}
+.titlebox0{width: 202px;float: left;margin-top: 10px;}
+.titleboxs3{width: 622px;float: left;margin-bottom: 10px;}
+.bannerbox{float: left;width: 365px;}
+.banner{margin:0 0 10px 5px;float: left;}
+
+/*兩欄*/
+.secondcolumn{width: 870px;float: left;}
+.twocolumn{width: 213px;float: left;}
+.travelbox{margin-right: 15px;}
+.arrow_type{float: left;}
+.titletype{font-size: 22px;font-weight: bold;float: left;}
+.push_area2{position:relative;width:200px;float:left;margin:0 2px 20px 2px;}
+.tagthand2{position:absolute;z-index:99;top:65px;right:0px;}
+.img2 {width: 200px;height: 133px;}
+.item2{width:420px;margin:7px auto;}
+.item_title2{color:#000;font-size:14px;font-weight:bold;text-align:left;float: left;width: 140px;margin-top: -5px;}
+
+.item_mn2{float:left;color:#ea0303;font-size:13px;font-weight:bold;margin-top:-3px;}
+.item_price2{float:left;color:#ea0303;font-size:15px;font-weight:bold;margin-top:-4px;}
+.item_st2{float:left;color:#ea0303;font-size:13px;font-weight:bold;margin-top:-3px;}
+
+
+
+/*四欄*/
+.titlebox{width: 1230px;float: left;margin-bottom: 5px;}
+.titlemore{float: left;margin-top: 5px;}
+.btmore{color: #13ace5;font-size: 14px; text-decoration:none;}
+
+.push_areas{position:relative;width:290px;float:left;margin:5px 17px 25px 5px;}
+.tagthands{position:absolute;z-index:99;top:108px;right:0px;}
+.push_areas img{border:none;}
+.img3 {width: 290px;height: 176px;}
+.items{width:420px;margin:6px auto;}
+.item_titles{color:#000;font-size:15px;font-weight:bold;text-align:left;float: left;width:213px;}
+.item_mns{float:left;color:#ea0303;font-size:13px;font-weight:bold;margin-top:3px;}
+.item_prices{float:left;color:#ea0303;font-size:18px;font-weight:bold;}
+.item_sts{float:left;color:#ea0303;font-size:13px;font-weight:bold;margin-top:3px;}
+
+
+/*五欄*/
+.push_area5{position:relative;width:234px; float:left;margin:0px 9px 5px 5px;}
+.tagthand5{position:absolute;z-index:99;top:74px;right:0px;}
+.push_area5 img{border:none;}
+.img5{width: 234px;height: 142px;}
+.item5{width:234px;margin:0px auto;}
+.item_title5{color:#000;font-size:16px;font-weight:bold;text-align:left;margin:2px 0 20px 0;float: left;width: 154px;}
+
+/*下方頻道*/
+.channel{
+	height: auto;
+	margin: 30px auto;
+	text-align: center;
+	width: 835px;
+}
+.channel_item{
+	float: left;
+	padding: 0 40px;
+}
+
+/*新增icon*/
+.icon_local{
+	border-left:solid 5px #82b548;
+	padding-left:5px;
+}
+.icon_goods{
+	border-left:solid 5px #ffc156;
+	padding-left:5px;
+}
+.icon_travel{
+	border-left:solid 5px #60d4ff;
+	padding-left:5px;
+}
+.icon1{width: 44px;float: left;}

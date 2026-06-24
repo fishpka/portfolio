@@ -1,0 +1,163 @@
+@charset "utf-8";
+
+*{
+	margin: 0;
+	padding: 0;
+}
+html{ 
+	font-family:"Segoe UI",Arial, Helvetica, sans-serif;
+	-webkit-text-size-adjust:none;
+	background:url(../images/concrete_seamless.png);
+}
+body{
+	overflow-x:hidden!important;
+	overflow: hidden;
+}
+
+h1,h2,h3,h4,h5,h6{
+	color: #000!important;
+}
+
+h3{
+	font-weight: bold!important;
+	margin-top:0!important;
+}
+
+a{text-decoration: none;}
+.clear{ 
+	clear:both;}
+}
+.margin10{
+	margin: 10px 0;
+}
+.margin20{
+	margin: 20px 0;
+}
+.margin30{
+	margin: 30px 0;
+}
+.margin40{
+	margin: 40px 0;
+}
+.margin50{
+	margin: 50px 0;
+}
+.margin60{
+	margin: 60px 0;
+}
+.margin70{
+	margin: 70px 0;
+}
+/*mwelcome*/
+.titleW{
+	color: #fff;
+	text-align: center;
+}
+
+.loginWrap{
+	width: 100%;
+
+}
+.loginbox{
+	width: 300px;
+	margin: 0 auto;
+}
+/*btn*/
+.fb_btn,.signin_btn,.enterapp_btn,.enter_btn{ 
+	float:right; 
+	border-radius:3px; 
+	font-size:16px; 
+	height:40px; 
+	margin-top:20px;  
+	line-height:40px; 
+	color:#FFFFFF; 
+	text-align:center;
+}
+.fb_btn{ 
+	background:#3a5998; 
+}
+.icon_fb{
+	margin:7px 2px 0 15px;
+	float: left;
+}
+.fb_btn a{ 
+	display:block; 
+	border-radius:3px; 
+	color:#FFFFFF; 
+	text-decoration:none;
+	padding:0 66px;
+}
+.fb_btn a:hover{
+	background:#506eaa;
+}
+
+.signin_btn{ 
+	background:#dd3c71; 
+}
+.signin_btn a{ 
+	display:block; 
+	border-radius:3px; 
+	color:#FFFFFF; 
+	text-decoration:none;
+	padding:0 97px;
+}
+.signin_btn a:hover{
+	background:#ec588b;
+}
+.btn_fg{
+	margin: -10px auto;
+	text-decoration:underline;
+	width:260px;
+}
+.btn_fg a,.btn_fg a:hover{
+	color: #fff;
+	text-decoration:underline;
+}
+.btn_in{
+		margin-left:100px;
+}
+
+/*mlogin*/
+.mbg{
+	background:url('../images/mobile_bg.jpg');
+	/*background-repeat:no-repeat; */
+	background-size: 100%;
+	padding-bottom:132px;
+	min-width:320px;
+
+}
+
+.enterapp_btn{ 
+	background:#dd3c71; 
+}
+.enterapp_btn a{ 
+	display:block; 
+	border-radius:3px; 
+	color:#FFFFFF; 
+	text-decoration:none;
+	padding:0 84px;
+}
+.enterapp_btn a:hover{
+	background:#ec588b;
+}
+.enter_btn{ 
+	background:#fff; 
+	opacity: 0.6;
+}
+.enter_btn a{ 
+	display:block; 
+	border-radius:3px; 
+	color:#8C8C8C; 
+	text-decoration:none;
+	padding:0 78px;
+}
+.enter_btn a:hover{
+	background:#ddd;
+}
+
+/* ================= PC user================= */
+@media only screen and (min-width:768px){
+.mbg{
+	height: 1090px;
+}
+}
