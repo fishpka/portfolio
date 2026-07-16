@@ -72,6 +72,7 @@
         font-weight: 800;
         letter-spacing: 0.08em;
         text-transform: uppercase;
+        animation: heroFadeIn 0.9s ease 0.1s both;
       }
 
       .nav {
@@ -129,6 +130,33 @@
 
       .hero-content {
         width: min(920px, 100%);
+      }
+
+      .hero-content .eyebrow {
+        animation: heroFadeIn 0.9s ease 0.2s both;
+      }
+
+      .hero-content h1 {
+        animation: heroFadeIn 0.9s ease 0.3s both;
+      }
+
+      .hero-copy {
+        animation: heroFadeIn 0.9s ease 0.4s both;
+      }
+
+      .hero-actions {
+        animation: heroFadeIn 0.9s ease 0.5s both;
+      }
+
+      @keyframes heroFadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(18px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
 
       .eyebrow {
@@ -442,7 +470,7 @@
       }
 
       .journal time {
-        color: var(--teal);
+        color: var(--accent);
         font-size: 13px;
         font-weight: 900;
       }
@@ -578,6 +606,16 @@
           display: block;
         }
       }
+
+      @media (prefers-reduced-motion: reduce) {
+        .brand,
+        .hero-content .eyebrow,
+        .hero-content h1,
+        .hero-copy,
+        .hero-actions {
+          animation: none;
+        }
+      }
     </style>
   </head>
   <body>
@@ -625,23 +663,23 @@
         <div class="services">
           <article class="service">
             <div class="service-number">01</div>
-            <h3>Product Thinking</h3>
-            <p>Frame the problem, user goal, business context and trade-offs before jumping into screens.</p>
+            <h3>產品思維</h3>
+            <p>在進入畫面前，先釐清問題、使用者目標、商業脈絡與取捨。</p>
           </article>
           <article class="service">
             <div class="service-number">02</div>
-            <h3>Design & Engineering</h3>
-            <p>Design flows, UI systems and responsive details with front-end feasibility in mind.</p>
+            <h3>設計與工程</h3>
+            <p>設計流程、介面系統與響應式細節，同時考量前端可行性。</p>
           </article>
           <article class="service">
             <div class="service-number">03</div>
-            <h3>Data-informed Design</h3>
-            <p>Use research, behavior signals and content patterns to decide what matters most.</p>
+            <h3>數據輔助設計</h3>
+            <p>用研究、行為訊號與內容模式，判斷真正重要的設計優先順序。</p>
           </article>
           <article class="service">
             <div class="service-number">04</div>
-            <h3>AI-assisted Workflow</h3>
-            <p>Use AI to speed up synthesis, planning, prototyping, documentation and design QA.</p>
+            <h3>AI 輔助工作流</h3>
+            <p>用 AI 加速洞察整理、規劃、原型、文件與設計品質檢查。</p>
           </article>
         </div>
       </section>
@@ -734,8 +772,8 @@
           <div class="section-label">About Celia</div>
           <h2>Senior web designer with product sense.</h2>
           <p>
-            I graduated from National Taiwan University of Arts, majoring in Visual Communication Design. I have
-            worked across ecommerce, social media, beauty tech, media platforms and campaign websites.
+            我畢業於國立臺灣藝術大學視覺傳達設計研究所，曾參與電商、社群、美妝科技、
+            媒體平台與活動網站等不同類型的數位產品。
           </p>
           <p>
             我擅長 UI/UX 設計、CSS / HTML / RWD 切版，並在商業目標、使用者體驗、資料洞察與工程可行性之間找到平衡。
@@ -772,23 +810,23 @@
         <div class="process-list">
           <article class="process-item">
             <span>01</span>
-            <h3>Discover</h3>
-            <p>Understand goals, users, evidence and constraints.</p>
+            <h3>探索</h3>
+            <p>理解目標、使用者、證據與限制。</p>
           </article>
           <article class="process-item">
             <span>02</span>
-            <h3>Define</h3>
-            <p>Identify the real problem and establish priorities.</p>
+            <h3>定義</h3>
+            <p>找出真正問題並建立優先順序。</p>
           </article>
           <article class="process-item">
             <span>03</span>
-            <h3>Design</h3>
-            <p>Explore flows, prototypes and interface solutions.</p>
+            <h3>設計</h3>
+            <p>探索流程、原型與介面解法。</p>
           </article>
           <article class="process-item">
             <span>04</span>
-            <h3>Deliver &amp; Improve</h3>
-            <p>Collaborate with engineering, review implementation and iterate.</p>
+            <h3>交付與優化</h3>
+            <p>與工程協作，檢查實作並持續優化。</p>
           </article>
         </div>
       </section>
@@ -805,32 +843,32 @@
           <article>
             <time datetime="2026-06-24">Research synthesis</time>
             <h3>整理洞察</h3>
-            <p>Cluster interview notes, feedback and themes into clearer product signals.</p>
+            <p>整理訪談筆記、回饋與主題，轉成更清楚的產品訊號。</p>
           </article>
           <article>
             <time datetime="2026-06-24">Product planning</time>
             <h3>規劃產品方向</h3>
-            <p>Draft user stories, assumptions, risks and decision options for team alignment.</p>
+            <p>草擬需求、假設、風險與決策選項，協助團隊對齊。</p>
           </article>
           <article>
             <time datetime="2026-06-24">Prototyping</time>
             <h3>加速原型</h3>
-            <p>Explore copy, flows and front-end prototypes faster before committing to details.</p>
+            <p>更快探索文案、流程與前端原型，再進入細節設計。</p>
           </article>
           <article>
             <time datetime="2026-06-24">Front-end support</time>
             <h3>協助前端落地</h3>
-            <p>Review HTML, CSS, responsive behavior and implementation feasibility.</p>
+            <p>檢查 HTML、CSS、響應式狀態與實作可行性。</p>
           </article>
           <article>
             <time datetime="2026-06-24">Documentation</time>
             <h3>整理交付文件</h3>
-            <p>Turn decisions into clearer specs, handoff notes and product rationale.</p>
+            <p>把決策整理成更清楚的規格、交付文件與產品脈絡。</p>
           </article>
           <article>
             <time datetime="2026-06-24">Design QA</time>
             <h3>檢查設計品質</h3>
-            <p>Check consistency, edge cases, text overflow, accessibility and mobile layout.</p>
+            <p>檢查一致性、例外情境、文字溢出、可及性與手機版面。</p>
           </article>
         </div>
       </section>
