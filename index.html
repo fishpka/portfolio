@@ -497,12 +497,27 @@
       .journal-grid {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 28px;
+        gap: 18px;
       }
 
       .journal article {
-        padding: 28px 0;
-        border-top: 1px solid var(--line);
+        position: relative;
+        min-height: 240px;
+        padding: 30px;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: rgba(255, 250, 242, 0.72);
+      }
+
+      .journal article::before {
+        content: "";
+        display: block;
+        width: 56px;
+        height: 1px;
+        margin-bottom: 34px;
+        background: currentColor;
+        opacity: 0.74;
       }
 
       .journal time {
@@ -512,13 +527,32 @@
       }
 
       .journal h3 {
-        margin: 18px 0 10px;
-        font-size: 28px;
-        line-height: 1.16;
+        max-width: 260px;
+        margin: 18px 0 16px;
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 1.08;
       }
 
       .journal p {
+        margin-bottom: 0;
         color: var(--muted);
+        font-size: 14px;
+        line-height: 1.75;
+      }
+
+      .journal article:hover {
+        color: #fff;
+        border-color: #111;
+        background: #111;
+      }
+
+      .journal article:hover time {
+        color: var(--accent);
+      }
+
+      .journal article:hover p {
+        color: rgba(255, 255, 255, 0.78);
       }
 
       .contact {
