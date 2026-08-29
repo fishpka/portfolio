@@ -4,11 +4,13 @@ function toggle(div_id) {
 	else {el.style.display = 'none';}
 }
 function blanket_size(popUpDivVar) {
+	var viewportheight;
 	if (typeof window.innerWidth != 'undefined') {
 		viewportheight = window.innerHeight;
 	} else {
 		viewportheight = document.documentElement.clientHeight;
 	}
+	var blanket_height;
 	if ((viewportheight > document.body.parentNode.scrollHeight) && (viewportheight > document.body.parentNode.clientHeight)) {
 		blanket_height = viewportheight;
 	} else {
@@ -21,15 +23,17 @@ function blanket_size(popUpDivVar) {
 	var blanket = document.getElementById('blanket');
 	blanket.style.height = blanket_height + 'px';
 	var popUpDiv = document.getElementById(popUpDivVar);
-	popUpDiv_height=blanket_height/2-500;//is half popup's height
+	var popUpDiv_height = blanket_height / 2 - 500;//is half popup's height
 	popUpDiv.style.top = popUpDiv_height + 'px';
 }
 function window_pos(popUpDivVar) {
+	var viewportwidth;
 	if (typeof window.innerWidth != 'undefined') {
 		viewportwidth = window.innerHeight;
 	} else {
 		viewportwidth = document.documentElement.clientHeight;
 	}
+	var window_width;
 	if ((viewportwidth > document.body.parentNode.scrollWidth) && (viewportwidth > document.body.parentNode.clientWidth)) {
 		window_width = viewportwidth;
 	} else {
@@ -40,12 +44,12 @@ function window_pos(popUpDivVar) {
 		}
 	}
 	var popUpDiv = document.getElementById(popUpDivVar);
-	window_width=window_width/2-400;//is half popup's width
+	window_width = window_width / 2 - 400;//is half popup's width
 	popUpDiv.style.left = window_width + 'px';
 }
 function popup(windowname) {
 	blanket_size(windowname);
 	window_pos(windowname);
 	toggle('blanket');
-	toggle(windowname);		
+	toggle(windowname);
 }

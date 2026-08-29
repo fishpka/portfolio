@@ -1,7 +1,7 @@
 ﻿@charset "utf-8";
 @import url("https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css");
 @import url("https: //fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
-@import url("http://fonts.cdnfonts.com/css/arial-rounded-mt-bold");
+@import url("https://fonts.cdnfonts.com/css/arial-rounded-mt-bold");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css");
 @import url("reset.css");
 :root {
@@ -132,7 +132,7 @@ header {
 
 /*主視覺*/
 .bg-box {
-  width: 100%; 
+  width: 100%;
   /* max-width: 600px; */
   margin:  0 auto ;
   text-align: center;
@@ -236,7 +236,7 @@ section {
 
 section .container {
     position: relative;
-    padding: 3rem; 
+    padding: 3rem;
 }
 
 @media (max-width: 1199px) {
@@ -258,7 +258,7 @@ section .container {
 
 
 /* PART-B */
- 
+
 
 /* 圖片翻轉 */
 
@@ -683,7 +683,7 @@ section .container {
     }
     section{margin-bottom: 1em;}
 }
- 
+
 .level {
     width: 110px;
     height: 110px;
@@ -1059,7 +1059,7 @@ section .container {
 
 /* form */
 .book-section {
-    background: #d75434; 
+    background: #d75434;
     width: 100%;
     max-width: 450px;
     color: #ffef70;
@@ -1135,10 +1135,10 @@ section .container {
   position:relative;
   display:inline-block;
   width:100%;
-  max-width:720px;           
-  background:#e4542e;        
+  max-width:720px;
+  background:#e4542e;
   border-radius:8px;
-  padding:0 0 16px 0;               
+  padding:0 0 16px 0;
   box-sizing:border-box;
 }
 
@@ -1148,7 +1148,7 @@ section .container {
   height: 50px;
   border:none;
   outline:none;
-  background:#f3dacd;      
+  background:#f3dacd;
   border-radius:8px;
   padding:8px 64px 8px 24px;
   font-size:16px;
@@ -1182,7 +1182,7 @@ section .container {
   width:60px;               /* 右邊深色區塊寬度 */
   background:#9a3a28;       /* 深紅棕色 */
   border-radius:0 8px 8px 0;
-  pointer-events:none; 
+  pointer-events:none;
 }
 
 
@@ -2010,13 +2010,13 @@ footer {
 		height: 0px;
 		padding-bottom: 35%;
 	}
-	
+
 	.addBooksLogo2, .addBooksLogo2.p-5{
 		padding-top: 50px!important;
         padding-bottom: 50px !important;
 	}
-	
-	
+
+
 }
 .addBooksLogo:after, .addBooksLogo2:before{
 	content: '';
@@ -2043,7 +2043,7 @@ footer {
 	display: none!important;
 }
 .all_view{
-	display: block!important;	
+	display: block!important;
 }
 @media screen and ( max-width: 768px ){
 	.mobile_view{
@@ -2160,7 +2160,7 @@ input[type="checkbox"] {
     accent-color: #ffef70;
 }
 .check-content {
-    width: 105%; 
+    width: 105%;
     margin-bottom: 12px;
     margin-left: 10px;
     font-size: 14px;
@@ -2194,8 +2194,8 @@ input[type="checkbox"] {
 }
 
 .timeline{
-   
-  color: var(--text); 
+
+  color: var(--text);
 }
 
 .timeline__grid{
@@ -2280,7 +2280,7 @@ input[type="checkbox"] {
   .timeline-item:nth-child(1){ order: 3; }
   .timeline-item:nth-child(2){ order: 2; }
   .timeline-item:nth-child(3){ order: 1; }
- 
+
 
   .timeline-item__text{
     text-align: center;
