@@ -3,27 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Celia Tsai Portfolio</title>
+    <title>Celia Tsai｜UI/UX & Web Design Portfolio</title>
     <link rel="icon" type="image/png" href="public/favicon.png" />
     <meta
       name="description"
-      content="Celia Tsai UI/UX and web design portfolio: product design, ecommerce, media, AR beauty, responsive web and frontend implementation."
+      content="Celia Tsai 的 UI/UX 與網站設計作品集，包含產品介面、活動網站、媒體平台、電商流程、RWD 與 HTML/CSS 實作。"
     />
     <meta property="og:image" content="public/ogimage.jpg" />
     <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="800" />
+    <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content="public/ogimage.jpg" />
     <style>
       :root {
-        --ink: #161616;
-        --muted: #6f6a63;
-        --paper: #f7f2ea;
-        --paper-2: #fffaf2;
-        --line: rgba(22, 22, 22, 0.13);
-        --accent: #f0642f;
-        --teal: #0e7c7b;
-        --gold: #c99a3d;
+        --ink: #171717;
+        --muted: #665f57;
+        --paper: #f6f1e9;
+        --paper-2: #fffaf4;
+        --line: rgba(23, 23, 23, 0.14);
+        --accent: #d95d39;
+        --gold: #b78235;
       }
 
       * {
@@ -37,7 +36,9 @@
       body {
         margin: 0;
         color: var(--ink);
-        background: var(--paper);
+        background:
+          linear-gradient(180deg, rgba(255, 250, 244, 0.72), rgba(246, 241, 233, 0.96)),
+          var(--paper);
         font-family: Arial, "Noto Sans TC", sans-serif;
         line-height: 1.6;
       }
@@ -62,16 +63,15 @@
         align-items: center;
         justify-content: space-between;
         gap: 28px;
-        padding: 22px clamp(20px, 4vw, 64px);
+        padding: 20px clamp(20px, 4vw, 64px);
         color: #fff;
         mix-blend-mode: difference;
       }
 
       .brand {
-        font-size: 18px;
+        font-size: 17px;
         font-weight: 800;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
+        letter-spacing: 0.03em;
         animation: heroFadeIn 0.9s ease 0.1s both;
       }
 
@@ -82,8 +82,7 @@
         gap: 18px;
         font-size: 13px;
         font-weight: 700;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
+        letter-spacing: 0.02em;
       }
 
       .nav a {
@@ -96,13 +95,13 @@
       }
 
       .hero {
-        min-height: 100vh;
+        min-height: 94vh;
         display: grid;
         align-items: end;
         position: relative;
         isolation: isolate;
         overflow: hidden;
-        padding: 140px clamp(24px, 6vw, 96px) 92px;
+        padding: 132px clamp(24px, 6vw, 96px) 86px;
         color: #fff;
         background: #121212;
       }
@@ -124,12 +123,12 @@
         inset: 0;
         z-index: -1;
         background:
-          linear-gradient(90deg, rgba(10, 10, 10, 0.78), rgba(10, 10, 10, 0.38) 46%, rgba(10, 10, 10, 0.12)),
-          linear-gradient(180deg, rgba(10, 10, 10, 0.5), transparent 38%, rgba(10, 10, 10, 0.78));
+          linear-gradient(90deg, rgba(9, 9, 9, 0.82), rgba(9, 9, 9, 0.42) 48%, rgba(9, 9, 9, 0.16)),
+          linear-gradient(180deg, rgba(9, 9, 9, 0.48), transparent 38%, rgba(9, 9, 9, 0.72));
       }
 
       .hero-content {
-        width: min(920px, 100%);
+        width: min(980px, 100%);
       }
 
       .hero-content .eyebrow {
@@ -163,12 +162,11 @@
         display: inline-flex;
         align-items: center;
         gap: 12px;
-        margin-bottom: 26px;
+        margin-bottom: 22px;
         color: rgba(255, 255, 255, 0.82);
         font-size: 13px;
         font-weight: 800;
-        letter-spacing: 0.16em;
-        text-transform: uppercase;
+        letter-spacing: 0.06em;
       }
 
       .eyebrow::before {
@@ -186,18 +184,18 @@
       }
 
       h1 {
-        max-width: 880px;
-        margin-bottom: 26px;
-        font-size: clamp(58px, 10vw, 142px);
-        line-height: 0.92;
+        max-width: 950px;
+        margin-bottom: 24px;
+        font-size: clamp(48px, 8.8vw, 124px);
+        line-height: 0.95;
         letter-spacing: 0;
       }
 
       .hero-copy {
-        max-width: 680px;
+        max-width: 720px;
         margin: 0 0 34px;
         color: rgba(255, 255, 255, 0.84);
-        font-size: clamp(18px, 2vw, 24px);
+        font-size: clamp(17px, 1.75vw, 22px);
       }
 
       .hero-actions,
@@ -214,11 +212,11 @@
         min-height: 48px;
         padding: 0 22px;
         border: 1px solid currentColor;
-        border-radius: 0;
+        border-radius: 999px;
         font-size: 13px;
         font-weight: 800;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
       }
 
       .button.primary {
@@ -238,7 +236,7 @@
       }
 
       main section {
-        padding: 112px clamp(24px, 6vw, 96px);
+        padding: 104px clamp(24px, 6vw, 96px);
       }
 
       .section-head {
@@ -252,21 +250,20 @@
         color: var(--accent);
         font-size: 12px;
         font-weight: 900;
-        letter-spacing: 0.16em;
-        text-transform: uppercase;
+        letter-spacing: 0.08em;
       }
 
       h2 {
         margin-bottom: 18px;
-        font-size: clamp(38px, 6vw, 82px);
-        line-height: 0.98;
+        font-size: clamp(27.2px, 4.16vw, 57.6px);
+        line-height: 1.2;
         letter-spacing: 0;
       }
 
       .lead {
         max-width: 780px;
         color: var(--muted);
-        font-size: clamp(18px, 2vw, 22px);
+        font-size: clamp(17px, 1.8vw, 21px);
       }
 
       .services {
@@ -281,8 +278,9 @@
         padding: 30px 30px 66px;
         overflow: hidden;
         border: 1px solid var(--line);
-        border-radius: 8px;
-        background: rgba(255, 250, 242, 0.72);
+        border-radius: 6px;
+        background: rgba(255, 250, 244, 0.82);
+        box-shadow: 0 18px 50px rgba(35, 26, 18, 0.05);
       }
 
       .service::before {
@@ -308,9 +306,9 @@
       .service h3 {
         max-width: 260px;
         margin-bottom: 16px;
-        font-size: 30px;
-        font-weight: 500;
-        line-height: 1.08;
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 1.16;
       }
 
       .service p {
@@ -335,7 +333,7 @@
       }
 
       .works {
-        background: var(--ink);
+        background: #181715;
         color: #fff;
       }
 
@@ -346,14 +344,15 @@
       .work-grid {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 1px;
-        background: rgba(255, 255, 255, 0.16);
+        gap: 14px;
+        background: transparent;
       }
 
       .work-card {
         position: relative;
         aspect-ratio: 1 / 1;
         overflow: hidden;
+        border-radius: 8px;
         background: #242424;
       }
 
@@ -374,7 +373,7 @@
         position: absolute;
         inset: auto 0 0 0;
         padding: 28px;
-        background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.86));
+        background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.9));
       }
 
       .work-info small {
@@ -383,13 +382,12 @@
         color: #ffb58f;
         font-size: 12px;
         font-weight: 900;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
+        letter-spacing: 0.05em;
       }
 
       .work-info h3 {
         margin-bottom: 8px;
-        font-size: 26px;
+        font-size: 25px;
         line-height: 1.1;
       }
 
@@ -440,7 +438,9 @@
       .profile-panel {
         padding: 36px;
         border: 1px solid var(--line);
+        border-radius: 8px;
         background: #fff;
+        box-shadow: 0 22px 56px rgba(35, 26, 18, 0.08);
       }
 
       .profile-panel img {
@@ -449,6 +449,7 @@
         object-fit: cover;
         object-position: 52% 18%;
         margin-bottom: 28px;
+        border-radius: 6px;
       }
 
       .profile-panel h3 {
@@ -506,8 +507,9 @@
         padding: 30px;
         overflow: hidden;
         border: 1px solid var(--line);
-        border-radius: 8px;
-        background: rgba(255, 250, 242, 0.72);
+        border-radius: 6px;
+        background: rgba(255, 250, 244, 0.82);
+        box-shadow: 0 18px 50px rgba(35, 26, 18, 0.05);
       }
 
       .journal article::before {
@@ -529,9 +531,9 @@
       .journal h3 {
         max-width: 260px;
         margin: 18px 0 16px;
-        font-size: 30px;
-        font-weight: 500;
-        line-height: 1.08;
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 1.16;
       }
 
       .journal p {
@@ -560,7 +562,7 @@
         grid-template-columns: minmax(0, 1fr) minmax(280px, 0.48fr);
         gap: clamp(36px, 7vw, 96px);
         color: #fff;
-        background: var(--ink);
+        background: #181715;
       }
 
       .contact .lead {
@@ -584,8 +586,7 @@
         color: rgba(255, 255, 255, 0.48);
         font-size: 12px;
         font-weight: 900;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
+        letter-spacing: 0.06em;
       }
 
       .contact-row a,
@@ -599,7 +600,7 @@
         gap: 20px;
         padding: 28px clamp(24px, 6vw, 96px);
         color: rgba(255, 255, 255, 0.6);
-        background: #0f0f0f;
+        background: #11100f;
         font-size: 13px;
       }
 
@@ -656,7 +657,7 @@
         }
 
         h1 {
-          font-size: 58px;
+          font-size: 50px;
         }
 
         .services,
@@ -692,7 +693,7 @@
     <header class="site-header" aria-label="Site navigation">
       <a class="brand" href="#home">Celia Tsai</a>
       <nav class="nav">
-        <a href="#services">What I Bring</a>
+        <a href="#services">Skills</a>
         <a href="#works">Works</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
@@ -706,26 +707,25 @@
           <img class="hero-image" src="./public/main.png" alt="Celia Tsai portfolio main visual" />
         </picture>
         <div class="hero-content">
-          <div class="eyebrow">UI / UX Designer · Taipei</div>
-          <h1>Celia Tsai Portfolio</h1>
+          <div class="eyebrow">UI / UX Designer in Taipei</div>
+          <h1>Designing useful digital products with care.</h1>
           <p class="hero-copy">
-            I design digital products, campaign sites, ecommerce flows and responsive interfaces that balance
-            visual craft, user insight and practical implementation.
+            我是 Celia，做 UI/UX、網站與前端介面。喜歡把複雜的需求整理清楚，讓產品好用、好看，也真的做得出來。
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="#works">View Works</a>
-            <a class="button" href="#contact">Contact Me</a>
+            <a class="button primary" href="#works">看作品</a>
+            <a class="button" href="#contact">聯絡我</a>
           </div>
         </div>
       </section>
 
       <section id="services">
         <div class="section-head">
-          <div class="section-label">What I Bring</div>
+          <div class="section-label">Skills</div>
           <div>
-            <h2>Product thinking, design craft, front-end and AI workflow.</h2>
+            <h2>從問題、介面到落地，我在意每一步有沒有說服力。</h2>
             <p class="lead">
-              I connect UX, technology, data and AI to make product ideas clearer, more usable and easier to build.
+              不只把畫面做漂亮，也會一起想內容架構、使用情境、RWD 細節和工程可行性。
             </p>
           </div>
         </div>
@@ -733,22 +733,22 @@
           <article class="service">
             <div class="service-number">01</div>
             <h3>釐清問題</h3>
-            <p>我習慣先理解目標、使用情境和限制，再決定設計應該解決什麼。</p>
+            <p>先把目標、使用者和限制問清楚，再決定畫面該怎麼長。</p>
           </article>
           <article class="service">
             <div class="service-number">02</div>
-            <h3>可行性設計</h3>
-            <p>從流程、介面到響應式細節，都會一起考量前端實作與維護成本。</p>
+            <h3>介面設計</h3>
+            <p>整理資訊層級、流程和視覺節奏，讓使用者知道下一步要做什麼。</p>
           </article>
           <article class="service">
             <div class="service-number">03</div>
-            <h3>排定優先順序</h3>
-            <p>透過研究、回饋和使用資料，找出值得先處理的問題與機會。</p>
+            <h3>前端思維</h3>
+            <p>熟悉 HTML、CSS 和 RWD，設計時會一起顧到切版與維護成本。</p>
           </article>
           <article class="service">
             <div class="service-number">04</div>
-            <h3>與 AI 協作</h3>
-            <p>我會用 AI 協助整理、發想、原型和檢查，但設計判斷仍由人決定。</p>
+            <h3>整理與驗證</h3>
+            <p>善用研究、資料和 AI 工具加快整理，但最後的判斷仍回到產品脈絡。</p>
           </article>
         </div>
       </section>
@@ -757,7 +757,7 @@
         <div class="section-head">
           <div class="section-label">Selected Works</div>
           <div>
-            <h2>My Works</h2>
+            <h2>一些我做過、也願意繼續打磨的作品。</h2>
           </div>
         </div>
         <div class="work-grid">
@@ -766,7 +766,7 @@
             <div class="work-info">
               <small>Web / UI Design</small>
               <h3>健康 2.0</h3>
-              <p>健康內容平台網站改版，重整內容閱讀與行動裝置體驗。</p>
+              <p>健康內容平台改版，讓閱讀、導流和手機瀏覽更順。</p>
             </div>
           </a>
           <a class="work-card" href="taste.html" target="_blank" rel="noopener noreferrer">
@@ -774,7 +774,7 @@
             <div class="work-info">
               <small>App UI</small>
               <h3>食尚玩家</h3>
-              <p>美食旅遊內容 App UI，結合探索、收藏與行程資訊。</p>
+              <p>美食旅遊 App UI，整理探索、收藏與行程資訊。</p>
             </div>
           </a>
           <a class="work-card" href="./books_2025/index.html" target="_blank" aria-label="Book annual report project" rel="noopener noreferrer">
@@ -782,7 +782,7 @@
             <div class="work-info">
               <small>Campaign</small>
               <h3>博客來年度報告</h3>
-              <p>以資料故事與活動視覺提升使用者回顧體驗。</p>
+              <p>用資料故事和活動視覺，做出有記憶點的年度回顧。</p>
             </div>
           </a>
           <a class="work-card" href="https://www.perfectcorp.com/business/technologies/makeup-ar" target="_blank" rel="noopener noreferrer">
@@ -790,7 +790,7 @@
             <div class="work-info">
               <small>Beauty Tech</small>
               <h3>Perfect.com</h3>
-              <p>AR / AI 美妝科技服務頁、品牌頁與動畫視覺更新。</p>
+              <p>美妝科技服務頁、品牌頁與互動視覺更新。</p>
             </div>
           </a>
           <a class="work-card" href="https://drive.google.com/file/d/1p4bWMuwKc8EYpLFZ0FzsRqBiPwqOxZaR/view?usp=sharing" target="_blank" rel="noopener noreferrer">
@@ -798,7 +798,7 @@
             <div class="work-info">
               <small>UX Research</small>
               <h3>使用者訪談</h3>
-              <p>分群招募、質性訪談、易用性測試與洞察整理。</p>
+              <p>從招募、訪談到洞察整理，協助團隊看見真正的問題。</p>
             </div>
           </a>
           <a class="work-card" href="https://cars.tvbs.com.tw" target="_blank" rel="noopener noreferrer">
@@ -806,7 +806,7 @@
             <div class="work-info">
               <small>Media Platform</small>
               <h3>地球黃金線</h3>
-              <p>汽車頻道內容架構、新聞導流與專題活動視覺。</p>
+              <p>汽車內容平台，處理新聞導流、專題活動與資訊架構。</p>
             </div>
           </a>
           <a class="work-card" href="./groupon/GROUPON.html" target="_blank" rel="noopener noreferrer">
@@ -814,15 +814,15 @@
             <div class="work-info">
               <small>Ecommerce</small>
               <h3>GROUPON</h3>
-              <p>團購網站與 App UI，聚焦商品瀏覽、分類與購買流程。</p>
+              <p>團購網站與 App UI，讓商品瀏覽、分類與購買流程更清楚。</p>
             </div>
           </a>
           <a class="work-card" href="https://fishpka.github.io/french" target="_blank" rel="noopener noreferrer">
-            <img src="./public/work/french.jpg" alt="YouCam Shop project thumbnail" />
+            <img src="./public/work/french.jpg" alt="French vocabulary tool project thumbnail" />
             <div class="work-info">
-              <small>language</small>
+              <small>Language Tool</small>
               <h3>French法語詞頻</h3>
-              <p>適合 B1-C1 作文、口說稿與新聞文章。工具會過濾常見虛詞，保留更有學習價值的主題詞， 並抓出常用句型。</p>
+              <p>為法文學習整理主題詞、常用句型和文章脈絡的小工具。</p>
             </div>
           </a>
           <a class="work-card" href="./bc/index.html" target="_blank" rel="noopener noreferrer">
@@ -839,22 +839,23 @@
       <section id="about" class="about">
         <div class="about-copy">
           <div class="section-label">About Celia</div>
-          <h2>Senior web designer with product sense.</h2>
+          <h2>設計網站很多年後，我更相信清楚比華麗重要。</h2>
           <p>
-            我畢業於國立臺灣藝術大學視覺傳達設計研究所，曾參與電商、社群、美妝科技、
-            媒體平台與活動網站等不同類型的數位產品。
+            我畢業於國立臺灣藝術大學視覺傳達設計研究所，做過電商、社群、美妝科技、
+            媒體平台和活動網站。不同產業有不同限制，但好設計通常都從「先講清楚」開始。
           </p>
           <p>
-            我擅長 UI/UX 設計、CSS / HTML / RWD 切版，並在商業目標、使用者體驗、資料洞察與工程可行性之間找到平衡。
+            我擅長 UI/UX、HTML / CSS / RWD，也習慣和工程、內容、行銷一起工作。
+            對我來說，作品不是停在版面，而是能不能讓使用者少想一點、讓團隊好推進一點。
           </p>
           <div class="stats">
             <div class="stat">
               <strong>15+</strong>
-              <span>Years experience</span>
+              <span>Years in digital design</span>
             </div>
             <div class="stat">
               <strong>30+</strong>
-              <span>Web / app projects</span>
+              <span>Web and app projects</span>
             </div>
             <div class="stat">
               <strong>UI</strong>
@@ -865,7 +866,7 @@
         <aside class="profile-panel">
           <img src="./public/me.png" alt="Celia Tsai" />
           <h3>Celia Tsai</h3>
-          <p>UI/UX Designer · Senior Web Designer · Taipei, Taiwan</p>
+          <p>UI/UX Designer · Web Designer · Taipei, Taiwan</p>
         </aside>
       </section>
 
@@ -904,40 +905,40 @@
         <div class="section-head">
           <div class="section-label">Workflow</div>
           <div>
-            <h2 id="journal-title">Where AI improves my design process.</h2>
-            <p class="lead">AI is a workflow accelerator: useful for structure, speed and review, while product judgment stays human.</p>
+            <h2 id="journal-title">工具可以加速，判斷還是要回到人。</h2>
+            <p class="lead">我會把 AI 放在整理、發想和檢查的位置，省下重複工作，把時間留給更需要設計判斷的地方。</p>
           </div>
         </div>
         <div class="journal-grid">
           <article>
-            <time datetime="2026-06-24">Research synthesis</time>
+            <time datetime="2026-06-24">Research</time>
             <h3>整理洞察</h3>
-            <p>整理訪談筆記、回饋與主題，轉成更清楚的產品訊號。</p>
+            <p>把訪談、回饋和零散筆記整理成團隊看得懂的重點。</p>
           </article>
           <article>
-            <time datetime="2026-06-24">Product planning</time>
+            <time datetime="2026-06-24">Planning</time>
             <h3>規劃產品方向</h3>
-            <p>草擬需求、假設、風險與決策選項，協助團隊對齊。</p>
+            <p>快速列出需求、假設和風險，讓討論更容易聚焦。</p>
           </article>
           <article>
             <time datetime="2026-06-24">Prototyping</time>
             <h3>加速原型</h3>
-            <p>更快探索文案、流程與前端原型，再進入細節設計。</p>
+            <p>先試文案、流程和互動方向，再回頭修細節。</p>
           </article>
           <article>
-            <time datetime="2026-06-24">Front-end support</time>
+            <time datetime="2026-06-24">Front-end</time>
             <h3>協助前端落地</h3>
-            <p>檢查 HTML、CSS、響應式狀態與實作可行性。</p>
+            <p>檢查 HTML、CSS、響應式狀態，提早發現不好做的地方。</p>
           </article>
           <article>
             <time datetime="2026-06-24">Documentation</time>
             <h3>整理交付文件</h3>
-            <p>把決策整理成更清楚的規格、交付文件與產品脈絡。</p>
+            <p>把決策、規格和脈絡寫清楚，減少來回確認。</p>
           </article>
           <article>
             <time datetime="2026-06-24">Design QA</time>
             <h3>檢查設計品質</h3>
-            <p>檢查一致性、例外情境、文字溢出、可及性與手機版面。</p>
+            <p>看一致性、例外狀態、文字溢出、可及性和手機版面。</p>
           </article>
         </div>
       </section>
@@ -945,13 +946,12 @@
       <section id="contact" class="contact">
         <div>
           <div class="section-label">Contact</div>
-          <h2>Let’s build a clearer digital product.</h2>
+          <h2>有適合的題目，歡迎找我聊聊。</h2>
           <p class="lead">
-            I enjoy working with teams that value thoughtful design, close collaboration and practical product outcomes.
-            Feel free to get in touch.
+            我喜歡和重視產品細節、願意一起討論的團隊合作。網站、產品頁、介面整理或前端切版，都可以從一封信開始。
           </p>
           <div class="section-actions">
-            <a class="button primary" href="mailto:fishpka@hotmail.com">Send Email</a>
+            <a class="button primary" href="mailto:fishpka@hotmail.com">寫信給我</a>
             <a class="button" href="https://www.linkedin.com/in/celia-tsai-5b254779" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </div>
         </div>
