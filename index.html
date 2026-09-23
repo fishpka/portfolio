@@ -66,6 +66,24 @@
         padding: 20px clamp(20px, 4vw, 64px);
         color: #fff;
         mix-blend-mode: difference;
+        transition:
+          padding 0.24s ease,
+          color 0.24s ease,
+          background 0.24s ease,
+          box-shadow 0.24s ease,
+          border-color 0.24s ease;
+      }
+
+      .site-header.is-scrolled {
+        padding-top: 14px;
+        padding-bottom: 14px;
+        color: var(--ink);
+        border-bottom: 1px solid rgba(23, 23, 23, 0.1);
+        background: rgba(246, 241, 233, 0.74);
+        box-shadow: 0 14px 40px rgba(35, 26, 18, 0.08);
+        backdrop-filter: blur(18px) saturate(1.18);
+        -webkit-backdrop-filter: blur(18px) saturate(1.18);
+        mix-blend-mode: normal;
       }
 
       .brand {
@@ -606,11 +624,14 @@
 
       @media (max-width: 980px) {
         .site-header {
-          align-items: flex-start;
           color: #fff;
+          align-items: flex-start;
+          mix-blend-mode: difference;
+        }
+
+        .site-header.is-scrolled {
+          color: var(--ink);
           mix-blend-mode: normal;
-          background: rgba(15, 15, 15, 0.74);
-          backdrop-filter: blur(14px);
         }
 
         .nav {
@@ -634,7 +655,7 @@
 
       @media (max-width: 640px) {
         .site-header {
-          position: absolute;
+          position: fixed;
           display: block;
         }
 
@@ -976,5 +997,15 @@
       <span>© 2026 Celia Tsai. All Rights Reserved.</span>
       <a href="#home">Back to top</a>
     </footer>
+    <script>
+      const siteHeader = document.querySelector(".site-header");
+
+      function syncHeaderSurface() {
+        siteHeader.classList.toggle("is-scrolled", window.scrollY > 12);
+      }
+
+      syncHeaderSurface();
+      window.addEventListener("scroll", syncHeaderSurface, { passive: true });
+    </script>
   </body>
 </html>
